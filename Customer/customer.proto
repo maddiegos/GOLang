@@ -1,5 +1,7 @@
-syntax="proto3";
 package customer;
+
+syntax="proto3";
+
 
 service customer {
     //Get All Customers with filter- A server to client straming rpc 
@@ -26,5 +28,5 @@ message CustomerRequest{
         string zip=4;
         bool isShippingAddress= 5;
            }
-
+repeated
 }
