@@ -28,5 +28,5 @@ message CustomerRequest{
         string zip=4;
         bool isShippingAddress= 5;
            }
-repeated
+repeated message Address=5;
 }
