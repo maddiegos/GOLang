@@ -1,14 +1,14 @@
+syntax = "proto3";
 package customer;
 
-syntax="proto3";
 
 
 service customer {
     //Get All Customers with filter- A server to client straming rpc 
-    rpc Getcustomers(CustomerFilter) returns (Stream CustomerRequest)
+    rpc Getcustomers(CustomerFilter) returns (stream CustomerRequest){}
 
     // Create a new Customer - a simpler RPC
-    rpc CreateCustomer (CustomerRequest) returns (CustomerResponse)
+    rpc CreateCustomer (CustomerRequest) returns (CustomerResponse){}
 
 
 }
@@ -28,7 +28,7 @@ message CustomerRequest{
         string zip=4;
         bool isShippingAddress= 5;
            }
-repeated message Address=5;
+repeated Address addresses=5;
 }
 message CustomerResponse {
     int32 id = 1;
